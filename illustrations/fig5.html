@@ -11,9 +11,9 @@
     <body style="margin: 0; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
+            loading-screen="enabled: true;"
             renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
             id="scene"
             embedded
             gesture-detector
@@ -37,7 +37,7 @@
             >
                 <a-entity
                     id="bowser-model"
-                    scale="1 1 1"
+                    scale="10 10 10"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
