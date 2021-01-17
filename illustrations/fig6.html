@@ -9,11 +9,11 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene
+        <a-scene 
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
             id="scene"
             embedded
             gesture-detector
@@ -21,7 +21,7 @@
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
-                    src="assets/ibm_3277_terminal/scene.gltf"
+                    src="assets/avocado.gltf"
                 ></a-asset-item>
             </a-assets>
 
@@ -29,14 +29,14 @@
                 id="markerA"
                 type="pattern"
                 preset="custom"
-                url="assets/fig6-read.patt"
+                url="assets/fig6-2500.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
             >
                 <a-entity
-                    id="bowser-model"
-                    scale="2 2 2"
+                    id="browser-model"
+                    scale="10 10 10"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
