@@ -19,12 +19,12 @@
             embedded
             gesture-detector
         >
-<!--             <a-assets>
+             <a-assets>
                 <a-asset-item
                     id="animated-asset"
-                    src="assets/avocado.gltf"
+                    src="assets/Test-File-1.gltf"
                 ></a-asset-item>
-            </a-assets> -->
+            </a-assets> 
 
             <a-marker
                 id="markerA"
@@ -35,15 +35,14 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
             >
-            <a-box position='0 0.5 0' color="yellow"></a-box>
-<!--                 <a-entity
-                    id="browser-model"
-                    scale="10 10 10"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity> -->
+<!--             <a-box position='0 0.5 0' color="yellow"></a-box> -->
+             <a-entity
+                id="browser-model"
+                scale="1 1 1"
+                gltf-model="#animated-asset"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
