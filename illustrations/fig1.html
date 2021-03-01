@@ -21,7 +21,7 @@
     gesture-detector
     >
     <a-assets>
-        <a-asset-item id="animated-asset" src="assets/Test-File-2-GIF.gltf"></a-asset-item>
+<!--         <a-asset-item id="animated-asset" src="assets/Test-File-2-GIF.gltf"></a-asset-item> -->
         <img id="felix" src="assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif"></img>
     </a-assets> 
 
@@ -34,23 +34,23 @@
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;">
         <a-entity class="clickable" gesture-handler>
-            <a-plane geometry="primitive: plane;" scale="1 1 1" rotation="0 0 0" position="0 0.2 0" material="shader:gif;src: #felix"></a-entity>
+            <a-plane geometry="primitive: plane;" scale="1 1 1" rotation="0 0 0" position="0.5 0.5 0" material="shader:gif;src: #felix"></a-entity>
 
-            <a-plane geometry="primitive: plane;" scale="0.5 0.5 0.5" rotation="0 0 0" position="0 0 0" material="shader:gif;src: #felix"></a-entity>
+            <a-plane geometry="primitive: plane;" scale="0.7 0.7 0.7" rotation="0 0 0" position="0 0 0" material="shader:gif;src: #felix"></a-entity>
 
-            <a-plane geometry="primitive: plane;" scale="0.1 0.1 0.1" rotation="0 0 0" position="0 -0.2 0" material="shader:gif;src: #felix"></a-entity>
+            <a-plane geometry="primitive: plane;" scale="0.5 0.5 0.5" rotation="0 0 0" position="-0.5 -0.5 0" material="shader:gif;src: #felix"></a-entity>
 
-            <a-plane geometry="primitive: box;" scale="0.5 0.5 0.5" position="0 1 0" material="color: blue"></a-entity>
+            <a-plane geometry="primitive: box;" position="0 1 0" material="color: blue"></a-entity>
         </a-entity>
 
-        <a-entity 
+<!--         <a-entity 
         id="browser-model"
         scale="50 50 50"
         gltf-model="#animated-asset"
         class="clickable"
         gesture-handler
-        ></a-entity>
-        <a-entity geometry="primitive:box;" material="shader:gif;src:url(assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif)" scale=".5 .5 .5" position="0 0 0" class="clickable" gesture-handler></a-entity>
+        ></a-entity> -->
+  
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
