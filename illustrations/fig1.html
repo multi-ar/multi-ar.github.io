@@ -8,7 +8,6 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -23,8 +22,8 @@
             <img id="A7" src="assets/Textures/The_1960s_Idea_of__The_Home_of_1999___Flashback__History_S.gif"></img>
         </a-assets> 
 
-        <a-marker id="markerA" type="pattern" url="assets/fig1-1600.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity rotation="-10 0 0" position="0 0.4 -0.3" scale=".5 .5 .5" class="clickable" gesture-handler look-at="#player">
+        <a-marker id="markerA" type="pattern" url="assets/fig1-1600.patt" smooth="true" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity rotation="-10 0 0" position="0 0.4 -0.3" scale=".5 .5 .5" class="clickable" gesture-handler>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="-1 0 -0.6" material="shader:gif;src: #A7;side: double"></a-entity>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="1 0 -0.4" material="shader:gif;src: #A2;side: double"></a-entity>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0 0.5 -0.2" material="shader:gif;src: #A3;side: double"></a-entity>
