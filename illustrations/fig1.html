@@ -20,12 +20,12 @@
             embedded
             gesture-detector
         >
-             <a-assets>
+<!--              <a-assets>
                 <a-asset-item
                     id="animated-asset"
                     src="assets/Test-File-2-GIF.gltf"
                 ></a-asset-item>
-            </a-assets> 
+            </a-assets>  -->
 
             <a-marker
                 id="markerA"
@@ -36,14 +36,18 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
             >
-<!--             <a-box position='0 0.5 0' color="yellow"></a-box> -->
-             <a-entity
+            <a-entity geometry="primitive:plane;" height="100" width="100" rotation="-90 0 0" position="0 0 -10" material="shader:gif;src:url(assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif)"></a-entity>
+            <a-entity geometry="primitive:plane;" height="50" width="50" rotation="-90 0 0" position="0 0 0" material="shader:gif;src:url(assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif)"></a-entity>
+            <a-entity geometry="primitive:plane;" height="10" width="10" rotation="-90 0 0" position="0 0 10" material="shader:gif;src:url(assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif)"></a-entity>
+
+
+<!--              <a-entity
                 id="browser-model"
                 scale="50 50 50"
                 gltf-model="#animated-asset"
                 class="clickable"
                 gesture-handler
-            ></a-entity>
+            ></a-entity> -->
 <!--             <a-entity geometry="primitive:box;" material="shader:gif;src:url(assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif)" scale=".5 .5 .5" position="0 0 0" class="clickable" gesture-handler></a-entity> -->
             </a-marker>
 
