@@ -11,49 +11,25 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <a-scene 
-    vr-mode-ui="enabled: false;"
-    loading-screen="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-    id="scene"
-    embedded
-    gesture-detector
-    >
-    <a-assets>
-<!--         <a-asset-item id="animated-asset" src="assets/Test-File-2-GIF.gltf"></a-asset-item> -->
-        <img id="felix" src="assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif"></img>
-    </a-assets> 
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        
+        <a-assets>
+            <img id="felix" src="assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif"></img>
+        </a-assets> 
 
-    <a-marker
-    id="markerA"
-    type="pattern"
-    preset="custom"
-    url="assets/fig1-1600.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;">
-        <a-entity rotation="-10 0 0" position="0.2 0 0" scale=".5 .5 .5" class="clickable" gesture-handler>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.5" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.3" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.1" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.1" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.3" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.4" material="shader:gif;src: #felix;side: double"></a-entity>
-            <a-entity geometry="primitive: box;" size=".3 .3" rotation="0 0 0" position="0 0.5 0.4" material="shader:gif;src: #felix;side: double"></a-entity>
-        </a-entity>
-
-<!--         <a-entity 
-        id="browser-model"
-        scale="50 50 50"
-        gltf-model="#animated-asset"
-        class="clickable"
-        gesture-handler
-        ></a-entity> -->
-  
-    </a-marker>
-    <a-entity camera></a-entity>
-</a-scene>
+        <a-marker id="markerA" type="pattern" preset="custom" url="assets/fig1-1600.patt" raycaster="objects: .clickable"emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity rotation="-10 0 0" position="0.2 0 0" scale=".5 .5 .5" class="clickable" gesture-handler>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.5" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.3" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 -0.1" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.1" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.3" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" size="1 1" rotation="0 0 0" position="0 0 0.4" material="shader:gif;src: #felix;side: double"></a-entity>
+                <a-entity geometry="primitive: box;" size=".3 .3" rotation="0 0 0" position="0 0.5 0.4" material="shader:gif;src: #felix;side: double"></a-entity>
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 </html>
