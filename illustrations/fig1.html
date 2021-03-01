@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html>
-<title>Medium is the message</title>
+<title>Multi AR</title>
 <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -11,10 +11,8 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-<!--     <a-scene vr-mode-ui="enabled: false;" loading-screen="dotsColor: red; backgroundColor: black; enabled: false" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector> -->
-    <a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false" vr-mode-ui="enabled: false;" embedded arjs gesture-detector>
+    <a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false" vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" embedded gesture-detector>
         <a-assets>
-            <img id="felix" src="assets/Textures/5568ef61-0f5e-4dab-9c5f-44fc8306cd1d.gif"></img>
             <img id="A1" src="assets/Textures/Andy_Warhol_-_Exploding_Plastic_Inevitable_High_quality_S.gif"></img>
             <img id="A2" src="assets/Textures/ATandT_Archives_Seeing_the_Digital_Future_1961_S.gif"></img>
             <img id="A3" src="assets/Textures/Comptons_Interactive_Encyclopedia_1995_CD-ROM_S.gif"></img>
@@ -24,6 +22,7 @@
             <img id="A7" src="assets/Textures/The_1960s_Idea_of__The_Home_of_1999___Flashback__History_S.gif"></img>
         </a-assets> 
 
+        <a-marker id="markerA" type="pattern" url="assets/fig1-1600.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <a-entity rotation="-10 0 0" position="0 0.4 -0.3" scale=".5 .5 .5" class="clickable" gesture-handler>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="-1 0 -0.6" material="shader:gif;src: #A7;side: double"></a-entity>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="1 0 -0.4" material="shader:gif;src: #A2;side: double"></a-entity>
@@ -33,9 +32,9 @@
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0.5 0.5 0.4" material="shader:gif;src: #A6;side: double"></a-entity>
                 <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0.2 0.2 0.6" material="shader:gif;src: #A1;side: double"></a-entity>
             </a-entity>
-        <a-marker-camera id="markerA" type="pattern" url="assets/fig1-1600.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
         </a-marker>
-        <!-- <a-entity camera></a-entity> -->
+
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 </html>
