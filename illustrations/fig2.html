@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Multi AR</title>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false" vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" embedded gesture-detector>
+        <a-assets>
+            <img id="A1" src="assets/Textures/Andy_Warhol_-_Exploding_Plastic_Inevitable_High_quality_S.gif"></img>
+            <img id="A2" src="assets/Textures/ATandT_Archives_Seeing_the_Digital_Future_1961_S.gif"></img>
+            <img id="A3" src="assets/Textures/Comptons_Interactive_Encyclopedia_1995_CD-ROM_S.gif"></img>
+            <img id="A4" src="assets/Textures/IBM_at_the_Fair_1964_S.gif"></img>
+            <img id="A5" src="assets/Textures/Prometheus__Kazan_USSR_TV_Documentary_1_S.gif"></img>
+            <img id="A6" src="assets/Textures/Prometheus__Kazan_USSR_TV_Documentary_2_S.gif"></img>
+            <img id="A7" src="assets/Textures/The_1960s_Idea_of__The_Home_of_1999___Flashback__History_S.gif"></img>
+        </a-assets> 
+
+        <a-marker id="markerA" type="pattern" url="assets/fig2-1024.patt" smooth="true" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity rotation="-90 0 0" position="0 0.4 -0.3" scale="1 1 1" class="clickable" gesture-handler>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="-1 0 -0.6" material="shader:gif;src: #A7;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="1 0 -0.4" material="shader:gif;src: #A2;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0 0.5 -0.2" material="shader:gif;src: #A3;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="-0.9 0 0" material="shader:gif;src: #A4;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="-0.4 -0.4 0.2" material="shader:gif;src: #A5;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0.5 0.5 0.4" material="shader:gif;src: #A6;side: double"></a-entity>
+                <a-entity geometry="primitive: plane;" rotation="0 0 0" position="0.2 0.2 0.6" material="shader:gif;src: #A1;side: double"></a-entity>
+            </a-entity>
+        </a-marker>
+
+        <a-entity id="player" camera></a-entity>
+    </a-scene>
+</body>
+</html>
